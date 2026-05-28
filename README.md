@@ -2,8 +2,7 @@
 
 A minimal, ready-to-extend shell for an [IMC Prosperity 4](https://prosperity.imc.com/) trading bot.
 
-I didn't get a chance to compete in Prosperity 4, but I built this skeleton so the
-plumbing is already done: it implements the exact `Trader` interface Prosperity
+I didn't get a chance to compete in Prosperity 4 since I had other commitments, but prior to round 1 I built this skeleton and tested it with a simple EMA strategy: it implements the exact `Trader` interface Prosperity
 expects, wires up per-product strategy dispatch, persists state across ticks, and
 respects position limits. Drop in your strategy logic and upload — it runs as-is.
 
@@ -77,11 +76,9 @@ Notes on the `OrderDepth` / `Order` conventions:
 
 ## Files
 
-- `pudo.py` — the entire bot. This is the file you upload to Prosperity.
+- `pudo.py` — the entire bot. This is the file you upload to Prosperity. 
 
 ## Running it
 
 `pudo.py` imports `datamodel` (`Order`, `OrderDepth`, `TradingState`), which is provided
-by the Prosperity platform — you don't ship it. To run locally, use the community
-[prosperity backtester / `datamodel.py`](https://github.com/jmerle/imc-prosperity-3-backtester),
-then upload `pudo.py` to the Prosperity website to compete.
+by the Prosperity platform — you don't ship it. 
